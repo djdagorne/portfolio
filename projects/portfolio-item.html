@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dexter Dagorne Portfoio</title>
-    <link rel="stylesheet" href="" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"
@@ -18,14 +17,18 @@
       src="https://kit.fontawesome.com/684a0e80e0.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <!-- BRANDING/HEADER -->
     <header>
       <div class="logo">
         <!-- in a div in case i change to svg later -->
-        <img src="img/devjane.png" alt="devjane logo" />
+        <img
+          src="../img/dexter.png"
+          alt="dexter"
+          title="pascal case didn't look as cool"
+        />
         <!--  <h1 class="branding">&lt;dex&gt;</h1> -->
       </div>
       <button class="nav-toggle" aria-label="toggle navigation">
@@ -36,28 +39,28 @@
         <ul class="nav__list">
           <!-- the __ is so we know its a subcomponent when setting up custom CSS -->
           <li class="nav__item">
-            <a href="index.html" class="nav__link">Home</a>
+            <a href="../index.html" class="nav__link">Home</a>
           </li>
           <li class="nav__item">
-            <a href="index.html#services" class="nav__link">My Services</a>
+            <a href="../index.html#services" class="nav__link">My Services</a>
           </li>
           <li class="nav__item">
-            <a href="index.html#about" class="nav__link">About Me</a>
+            <a href="../index.html#about" class="nav__link">About Me</a>
           </li>
           <li class="nav__item">
-            <a href="index.html#work" class="nav__link">My Work</a>
+            <a href="../index.html#work" class="nav__link">My Work</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <!-- INTRODUCTION -->
-    <section class="intro">
-      <h1 class="section__title section__title--intro">
+    <!-- PORTFOLIO INTRO -->
+    <section class="port-intro">
+      <h1 class="section__title section__title--port-intro">
         The title of <strong>my project</strong>
       </h1>
       <p class="section__subtitle section__subtitle--intro">subtitle! yeah!</p>
-      <img src="img/portfolio-01.jpg" alt="demo pic" class="intro__img" />
+      <img src="../img/portfolio-01.jpg" alt="demo pic" class="intro__img" />
     </section>
 
     <div class="portfolio-item-individual">
@@ -65,7 +68,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
         qui alias dolor quibusdam aliquam est?
       </p>
-      <img src="img/services-bg.jpg" alt="testy" />
+      <img src="../img/services-bg.jpg" alt="testy" />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero unde
         vitae ratione doloremque esse.
@@ -95,6 +98,6 @@
         </li>
       </ul>
     </footer>
-    <script src="js/index.js"></script>
+    <script src="../js/index.js"></script>
   </body>
 </html>

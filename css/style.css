@@ -163,7 +163,10 @@ header {
 }
 
 .logo {
-  max-width: 100px;
+  max-width: 122px;
+  position: fixed;
+  background-color: var(--clr-light);
+  padding: 5px 0;
 }
 
 .nav {
@@ -265,8 +268,12 @@ header {
   opacity: 0;
 }
 
-/* ##################################################### INTRO SECTION */
+/* ##################################################### INTRO SECTIONS */
 .intro {
+  position: relative;
+}
+
+.port-intro {
   position: relative;
 }
 
@@ -322,7 +329,19 @@ header {
   .intro {
     display: grid;
     width: min-content;
-    margin: 25vh auto 25vh auto; /* 0 auto ||  230px auto 200px auto */
+    margin: 25vh auto 25vh auto; /* 0 auto ||  25vh auto 25vh auto */
+    grid-column-gap: 1em;
+    grid-template-areas:
+      "img title"
+      "img subtitle";
+    grid-template-columns: min-content max-content;
+    padding-top: 3em;
+  }
+
+  .port-intro {
+    display: grid;
+    width: min-content;
+    margin: 0 auto; /* 0 auto ||  25vh auto 25vh auto */
     grid-column-gap: 1em;
     grid-template-areas:
       "img title"
@@ -362,7 +381,7 @@ header {
     margin-left: -1rem;
     width: 100%;
     padding: 1.25em 1em;
-    top: 10rem;
+    top: 11rem;
     box-shadow: var(--bs-light);
   }
 
@@ -569,7 +588,7 @@ header {
 }
 
 .portfolio-item-individual p {
-  max-width: 576px;
+  max-width: 768px;
   margin-left: auto;
   margin-right: auto;
 }
