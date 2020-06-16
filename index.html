@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dexter Dagorne Portfoio</title>
+    <link rel="stylesheet" href="" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"
+    />
+    <!-- FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900|Lato:300,900|Raleway:300,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/684a0e80e0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- BRANDING/HEADER -->
+    <header id="home">
+      <div class="logo">
+        <!-- in a div in case i change to svg later -->
+        <img
+          src="img/dexter.png"
+          alt="dexter logo"
+          title="If i made this site in React, I'd do pascal case :D"
+        />
+        <!--  <h1 class="branding">&lt;dex&gt;</h1> -->
+      </div>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <!-- aria-label because it has not HTML label element to help screen readers/a11y stuff -->
+      <nav class="nav">
+        <ul class="nav__list">
+          <!-- the __ is so we know its a subcomponent when setting up custom CSS -->
+          <li class="nav__item">
+            <a href="#home" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#services" class="nav__link">My Services</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a href="#work" class="nav__link">My Work</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- INTRODUCTION SECTION -->
+    <section class="intro">
+      <h1 class="section__title section__title--intro">
+        Hi, I am <strong>Dexter Dagorne.</strong>
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">full-stack dev</p>
+      <div class="intro__img-wrap">
+        <span class="intro__img-wrap-accent"></span>
+        <a class="img-shadow">
+          <img
+            src="img/dev-dex-01.jpg"
+            alt="a picture of dexter"
+            class="intro__img"
+          />
+        </a>
+      </div>
+      <!-- the -- indicates a modifier class, the __ indicates subcomponent, so its a modified subcomponent -->
+    </section>
+
+    <!-- MY SERVICES -->
+    <section class="my-services" id="services">
+      <!-- three column section going over my skillset -->
+      <h2 class="section__title section__title--services">What I Do</h2>
+      <div class="services">
+        <div class="service">
+          <h3>Front End</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
+            libero deserunt tempora possimus ab nobis doloribus magni commodi
+            ipsam excepturi eos numquam hic minima aliquid nisi nemo, aliquam
+            laboriosam. Obcaecati?
+          </p>
+        </div>
+        <div class="service">
+          <h3>Back End</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+            neque id numquam adipisci! Beatae, tempore laboriosam, facilis, enim
+            dolorem fuga commodi voluptatem mollitia magni architecto deleniti.
+            Tempore dolor deserunt doloremque.
+          </p>
+        </div>
+        <div class="service">
+          <h3>Testing, Security</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quos
+            nihil molestiae a libero quasi provident hic maxime similique
+            tenetur ullam accusantium voluptas minus dicta, aliquam consequatur
+            quod illum explicabo.
+          </p>
+        </div>
+      </div>
+      <a href="#work" class="btn">My Work</a>
+    </section>
+    <!-- ABOUT ME -->
+    <section class="about-me" id="about">
+      <!-- by having sections/subsections we can assign classes to control sizing uniformly with all our titles/subtitles etc -->
+      <h2 class="section__title section__title--about">Who I am</h2>
+      <p class="section__subtitle section__subtitle--about">
+        Developer & Artist based out of Toronto
+      </p>
+
+      <div class="about-me__body">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+          doloremque distinctio in sit consequuntur mollitia consectetur error?
+          Delectus exercitationem aspernatur nesciunt. Atque voluptatem repellat
+          est nostrum rem blanditiis vel sunt!
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam modi
+          doloremque quam maxime culpa, amet voluptates voluptas, odit eligendi
+          ea, officiis non! Debitis vel perspiciatis rem quo sed?
+        </p>
+      </div>
+      <img
+        src="img/dev-dex-robot.jpg"
+        alt="When the machines rise up, Dexter will be fine."
+        class="about-me__img"
+      />
+    </section>
+
+    <!-- MY WORK -->
+    <section class="my-work" id="work">
+      <h2 class="section__title section__title--work">My Work</h2>
+      <p class="section__subtitle section__subtitle--work">
+        A selection of some of my work.
+      </p>
+      <div class="portfolio">
+        <a href="portfolio-item.html" class="portfolio__item">
+          <img src="img/portfolio-01.jpg" alt="" class="portfolio__img" />
+        </a>
+        <a href="portfolio-item.html" class="portfolio__item">
+          <img src="img/portfolio-02.jpg" alt="" class="portfolio__img" />
+        </a>
+        <a href="portfolio-item.html" class="portfolio__item">
+          <img src="img/portfolio-03.jpg" alt="" class="portfolio__img" />
+        </a>
+        <a href="portfolio-item.html" class="portfolio__item">
+          <img src="img/portfolio-04.jpg" alt="" class="portfolio__img" />
+        </a>
+        <a href="portfolio-item.html" class="portfolio__item">
+          <img src="img/portfolio-05.jpg" alt="" class="portfolio__img" />
+        </a>
+        <a href="portfolio-item.html" class="portfolio__item">
+          <img src="img/portfolio-06.jpg" alt="" class="portfolio__img" />
+        </a>
+        <a href="portfolio-item.html" class="portfolio__item">
+          <img src="img/portfolio-07.jpg" alt="" class="portfolio__img" />
+        </a>
+        <a href="portfolio-item.html" class="portfolio__item">
+          <img src="img/portfolio-08.jpg" alt="" class="portfolio__img" />
+        </a>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <a href="mailto:dj.dagorne@gmail.com" class="footer__link"
+        >dj.dagorne@gmail.com</a
+      >
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a href="https://github.com/djdagorne" class="social-list__link"
+            ><i class="fab fa-github"></i
+          ></a>
+        </li>
+        <li class="social-list__item">
+          <a href="https://linkedin.com/in/djdagorne" class="social-list__link"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+    <script src="js/index.js"></script>
+  </body>
+</html>

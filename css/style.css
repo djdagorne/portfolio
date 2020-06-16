@@ -1,0 +1,575 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* custom properties- update later for design */
+:root {
+  /* monospaced */
+  --ff-primary: "Lato", sans-serif;
+  --ff-secondary: "Source Code Pro", monospace;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-light: #f0f0f0;
+  --clr-dark: #303030;
+  --clr-accent: #43bfc7;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.4),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.1);
+
+  --bs-light: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.15),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.1);
+
+  --bs-in: 0.25em 0.15em 0.75em 0.2em rgba(0, 0, 0, 0.3) inset,
+    -0.125em -0.125em 0.75em 0.2em rgba(0, 0, 0, 0.2) inset;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.25rem;
+  }
+}
+
+/* ##################################################### GENERAL STYLES */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+strong {
+  font-weight: var(--fw-bold);
+}
+
+:focus {
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 2.5em;
+  background: var(--clr-accent);
+  color: var(--clr-dark);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: var(--fs-body);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+  transition: transform 200ms ease-in-out;
+}
+
+.btn__home {
+  margin-top: 5rem;
+  margin-bottom: 0px;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+section {
+  padding: 5em 2em;
+}
+
+/* ##################################################### TYPOGRAPHY */
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
+
+/* ##################################################### TITLES */
+.section__title {
+  margin-bottom: 0.25em;
+}
+
+.section__title--intro {
+  font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong {
+  display: block;
+}
+
+/* SUBTITLES */
+.section__subtitle {
+  margin: 0;
+  font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+  background: var(--clr-accent);
+  font-family: var(--ff-secondary);
+  padding: 0.25em 1em;
+  margin-bottom: 1em;
+}
+
+.section__subtitle--work {
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  margin-bottom: 2em;
+}
+
+/* ##################################################### HEADER  */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.branding {
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-reg);
+}
+
+.logo {
+  max-width: 100px;
+}
+
+.nav {
+  position: fixed;
+  background: var(--clr-dark);
+  color: var(--clr-light);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 11; /* nav elements are 11 and above z-index, above all stylistic stuff, above images, above backgrounds (obv) */
+
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  color: inherit;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h2);
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: var(--clr-accent);
+}
+
+.nav-toggle {
+  cursor: pointer;
+  background: transparent;
+  position: fixed;
+  border: 0;
+  padding: 0.5em;
+  right: 1em;
+  top: 1em; /* distance based on padding supplied */
+  z-index: 12; /* hamburger is top top top, above nav slightly */
+}
+
+.nav-open .nav {
+  transform: translateX(0%);
+}
+
+.nav-open .nav-toggle {
+  position: fixed;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  background: var(--clr-accent);
+  width: 2em;
+  height: 3px;
+  border-radius: 1em;
+  transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+  position: absolute;
+  content: "";
+  /* because our .hamburger is position:relative this left 0 right 0 is relative to .hamburgers position, rather than going across the entire screen */
+  left: 0;
+  right: 0;
+}
+
+.hamburger::before {
+  top: 6px;
+}
+
+.hamburger::after {
+  bottom: 6px;
+}
+/* aosudhasdouhasdouhasdoauhsd */
+/* transform: translate3d(0px, 12.5vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" */
+
+.nav-open .hamburger {
+  transform: rotate(315deg);
+}
+.nav-open .hamburger::before {
+  transform: rotate(90deg) translateX(-6px); /* that 6px is because thats what the hamburger 'bun' is offset by */
+}
+.nav-open .hamburger::after {
+  opacity: 0;
+}
+
+/* ##################################################### INTRO SECTION */
+.intro {
+  position: relative;
+}
+
+.intro__img {
+  filter: hue-rotate(13deg) saturate(169%) contrast(85%);
+}
+
+.intro__img-wrap {
+  max-width: 100%;
+  max-height: 100%;
+  background: var(--clr-light);
+  padding: 1rem;
+  box-shadow: var(--bs);
+  top: 1rem;
+}
+
+.intro__img-wrap-accent {
+  display: none;
+}
+
+.img-shadow {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+}
+
+.img-shadow::before {
+  width: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: var(--bs-in);
+  z-index: 4;
+}
+
+.section__subtitle--intro {
+  display: inline-block;
+  align-self: start;
+  grid-column: -1 / 1;
+  grid-row: 2;
+  text-align: right;
+  position: relative;
+  margin-left: 5px;
+  left: 9em;
+  /* relative position requires us to calculate the 100% width + the value we pushed the element left to keep offset */
+  width: 60%;
+}
+
+@media (min-width: 576px) {
+  .intro {
+    display: grid;
+    width: min-content;
+    margin: 25vh auto 25vh auto; /* 0 auto ||  230px auto 200px auto */
+    grid-column-gap: 1em;
+    grid-template-areas:
+      "img title"
+      "img subtitle";
+    grid-template-columns: min-content max-content;
+    padding-top: 3em;
+  }
+
+  .intro__img-wrap {
+    grid-area: img;
+    min-width: 250px;
+    margin: -2rem -1rem auto;
+    position: relative;
+  }
+
+  .intro__img {
+    grid-area: img;
+    min-width: 250px;
+    position: relative;
+    z-index: 2; /* images are lvl 2 */
+  }
+
+  .intro img {
+    box-shadow: var(--bs);
+  }
+
+  .img-shadow,
+  .img-shadow::before {
+    display: hidden;
+    box-shadow: 0 0 0 0;
+  }
+
+  .intro__img-wrap-accent {
+    display: block;
+    background-color: var(--clr-accent);
+    position: absolute;
+    margin-left: -1rem;
+    width: 100%;
+    padding: 1.25em 1em;
+    top: 10rem;
+    box-shadow: var(--bs-light);
+  }
+
+  /* MAYBE should be in typography, but this more layout related imo */
+  .section__subtitle--intro {
+    align-self: start;
+    grid-column: -1 / 1;
+    grid-row: 2;
+    text-align: right;
+    position: relative;
+    left: -1.5em;
+    /* relative position requires us to calculate the 100% width + the value we pushed the element left to keep offset */
+    width: calc(100% + 1.5em);
+  }
+}
+
+/* #####################################################  MY SERVICES */
+
+.my-services {
+  /* color + image/blend mode in case img doesnt load */
+  background-color: var(--clr-dark);
+  background-image: url(../img/services-bg.jpg);
+  background-size: cover;
+  background-blend-mode: hard-light;
+  color: var(--clr-light);
+  text-align: center;
+}
+
+.section__title--services {
+  color: var(--clr-accent);
+  position: relative;
+}
+
+.section__title--services::after {
+  /* interesting way of making a very customizable <hr/> psuedoelement */
+  content: "";
+  display: block;
+  width: 2.5em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  background: var(--clr-light);
+  opacity: 0.33;
+}
+
+.services {
+  margin-bottom: 4em;
+}
+
+.service {
+  max-width: 576px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .services {
+    display: flex;
+    max-width: 992px; /* stops the space inbetween service el's from getting too big */
+    margin: 0 auto 2em;
+  }
+
+  .service + .service {
+    /* makes a gap occur between service classed elements */
+    margin-left: 2em;
+  }
+}
+
+/* ##################################################### ABOUT ME */
+
+.about-me {
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+.about-me__img {
+  box-shadow: var(--bs);
+  margin: auto;
+}
+
+.about-me img {
+  filter: hue-rotate(-10deg) saturate(79%) contrast(85%);
+}
+
+@media (min-width: 768px) {
+  .about-me {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-areas:
+      "title img"
+      "subtitle img"
+      "text img";
+    grid-column-gap: 2em;
+  }
+
+  .section__title--about {
+    grid-area: title;
+  }
+  .section__subtitle--about {
+    /* 1/-1 makes it go across the entire row AKA all columns */
+    grid-column: 1 / -1;
+    grid-row: 2;
+    /* making sure text doesn't run under the img */
+    position: relative;
+    left: -1em;
+    width: calc(100% + 2em);
+    padding-left: 1em;
+    /* the right padding sets the images width as the rightpadding of the subtitle element */
+    padding-right: calc(200px + 4em);
+  }
+
+  .about-me__img {
+    position: relative;
+    z-index: 2;
+    grid-area: img;
+  }
+}
+
+/* ##################################################### MY WORK */
+
+.my-work {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  text-align: center;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.portfolio__item {
+  background: var(--clr-accent);
+  overflow: hidden;
+}
+
+.portfolio__img {
+  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+}
+
+.portfolio__item:focus {
+  position: relative;
+  outline-offset: 0px;
+  z-index: 2;
+}
+
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img {
+  transform: scale(1.2);
+  opacity: 0.75;
+}
+
+/* ##################################################### FOOTER */
+
+.footer {
+  background: #111;
+  color: var(--clr-accent);
+  text-align: center;
+  padding: 2.5em 0;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer__link {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+  opacity: 0.7;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 2em 0 0;
+  padding: 0;
+}
+
+.social-list__item {
+  margin: 0 0.5em;
+}
+
+.social-list__link {
+  /* make the padding generous for touch screen users. */
+  padding: 0.5em;
+}
+
+/* #### PORTFOLIO ITEMS */
+
+.portfolio-item-individual {
+  padding: 0 2em 2em;
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+.portfolio-item-individual p {
+  max-width: 576px;
+  margin-left: auto;
+  margin-right: auto;
+}
