@@ -269,6 +269,7 @@ header {
 
 .intro__img {
   filter: hue-rotate(13deg) saturate(169%) contrast(85%);
+  box-shadow: var(--bs);
 }
 
 .section__subtitle--intro {
@@ -280,18 +281,13 @@ header {
   position: relative;
   margin-left: 5px;
   left: 9em;
-  /* relative position requires us to calculate the 100% width + the value we pushed the element left to keep offset */
-  width: 60%;
+  /* relative position requires us to calculate the 100% width minus
+   the value we pushed the element left to keep offset */
+  width: calc(100% - 9em);
 }
 
 .line-break-size {
   display: none;
-}
-
-@media (min-width: 871px) {
-  .line-break-size {
-    display: none !important;
-  }
 }
 
 @media (min-width: 576px) {
@@ -306,6 +302,10 @@ header {
     grid-template-columns: min-content max-content;
     padding-top: 3em;
     padding-right: 0;
+  }
+
+  .section__subtitle--intro {
+    margin-bottom: 40px;
   }
 
   .port-intro {
@@ -348,14 +348,21 @@ header {
   }
 }
 
+@media (min-width: 871px) {
+  .line-break-size {
+    display: none !important;
+  }
+}
+
 /* #####################################################  MY SERVICES */
 
 .my-services {
   /* color + image/blend mode in case img doesnt load */
   background-color: var(--clr-dark);
-  background-image: url(../img/services-bg.jpg);
+  background-image: url(../img/my-computer.jpg);
   background-size: cover;
-  background-blend-mode: hard-light;
+  background-position: center;
+  background-blend-mode: multiply;
   color: var(--clr-light);
   text-align: center;
 }
@@ -477,7 +484,7 @@ header {
 }
 
 .portfolio__img {
-  transition: transform 3000ms, opacity 250ms linear;
+  transition: transform 5000ms, opacity 250ms linear;
 }
 
 .portfolio__item:focus,
