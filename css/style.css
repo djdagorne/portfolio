@@ -233,7 +233,6 @@ header {
   height: 2.5px;
   transition: transform 150ms ease-in-out;
 }
-
 .hamburger::before,
 .hamburger::after {
   position: absolute;
@@ -242,16 +241,12 @@ header {
   left: 0;
   right: 0;
 }
-
 .hamburger::before {
   top: 6px;
 }
-
 .hamburger::after {
   bottom: 6px;
 }
-/* aosudhasdouhasdouhasdoauhsd */
-/* transform: translate3d(0px, 12.5vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" */
 
 .nav-open .hamburger {
   transform: rotate(315deg);
@@ -276,37 +271,6 @@ header {
   filter: hue-rotate(13deg) saturate(169%) contrast(85%);
 }
 
-.intro__img-wrap {
-  max-width: 100%;
-  max-height: 100%;
-  background: var(--clr-light);
-  padding: 0.6rem;
-  box-shadow: var(--bs);
-  top: 1rem;
-}
-
-.intro__img-wrap-accent {
-  display: none;
-}
-
-.img-shadow {
-  display: inline-block;
-  position: relative;
-  max-width: 100%;
-}
-
-.img-shadow::before {
-  width: 100%;
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  box-shadow: var(--bs-in);
-  z-index: 4;
-}
-
 .section__subtitle--intro {
   display: inline-block;
   align-self: start;
@@ -320,6 +284,16 @@ header {
   width: 60%;
 }
 
+.line-break-size {
+  display: none;
+}
+
+@media (min-width: 871px) {
+  .line-break-size {
+    display: none !important;
+  }
+}
+
 @media (min-width: 576px) {
   .intro {
     display: grid;
@@ -331,6 +305,7 @@ header {
       "img subtitle";
     grid-template-columns: min-content max-content;
     padding-top: 3em;
+    padding-right: 0;
   }
 
   .port-intro {
@@ -345,13 +320,6 @@ header {
     padding-top: 3em;
   }
 
-  .intro__img-wrap {
-    grid-area: img;
-    min-width: 250px;
-    margin: -2rem -1rem auto;
-    position: relative;
-  }
-
   .intro__img {
     grid-area: img;
     min-width: 250px;
@@ -361,23 +329,6 @@ header {
 
   .intro img {
     box-shadow: var(--bs);
-  }
-
-  .img-shadow,
-  .img-shadow::before {
-    display: hidden;
-    box-shadow: 0 0 0 0;
-  }
-
-  .intro__img-wrap-accent {
-    display: block;
-    background-color: var(--clr-accent);
-    position: absolute;
-    margin-left: -0.6rem;
-    width: 100%;
-    padding: 1.25em 0.5em;
-    top: 11.25rem;
-    box-shadow: var(--bs-light);
   }
 
   /* MAYBE should be in typography, but this more layout related imo */
@@ -390,6 +341,10 @@ header {
     left: -1.5em;
     /* relative position requires us to calculate the 100% width + the value we pushed the element left to keep offset */
     width: calc(100% + 1.5em);
+  }
+
+  .line-break-size {
+    display: block;
   }
 }
 
@@ -515,28 +470,27 @@ header {
 
 .portfolio__item {
   background: var(--clr-accent);
+  transition: transform 250ms;
   max-width: 450px;
   max-height: 450px;
   overflow: hidden;
 }
 
 .portfolio__img {
-  transition: transform 5000ms, opacity 250ms linear;
+  transition: transform 3000ms, opacity 250ms linear;
 }
 
-.portfolio__item:focus {
+.portfolio__item:focus,
+.portfolio__item:hover {
   position: relative;
+  transform: scale(1.1);
   outline-offset: 0px;
   z-index: 2;
 }
 
-.portfolio__img:hover {
-  transform: scale(1.1);
-  opacity: 0.85;
-}
-
+.portfolio__img:hover,
 .portfolio__item:focus .portfolio__img {
-  opacity: 0.85;
+  opacity: 0.75;
 }
 
 @media (min-width: 768px) {
