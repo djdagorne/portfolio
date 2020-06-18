@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dexter Dagorne Portfolio - Trivia App</title>
+    <meta
+      name="description"
+      content="Lets check out Dexter Dagorne's jQuery based Nintendo Trivia web application! Made to emulate Nintendo's clean and accessible design, while implementing my own clean and accessible code"
+    />
+    <meta
+      name="keywords"
+      content="Javascript, HTML, CSS, JS, jQuery, framework, web development, development, front-end, back-end, frontend, backend, full-stack, fullstack, SEO, Dexter, Dagorne"
+    />
+    <meta name="author" content="Dexter Dagorne" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"
+    />
+    <!-- FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/684a0e80e0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- BRANDING/HEADER -->
+    <header>
+      <a href="../index.html#home" class="logo" title="back to the homepage">
+        <img src="../img/dexter.png" alt="dexters logo" />
+      </a>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="../index.html" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="../index.html#services" class="nav__link">My Services</a>
+          </li>
+          <li class="nav__item">
+            <a href="../index.html#about" class="nav__link">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a href="../index.html#work" class="nav__link">My Work</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- PORTFOLIO INTRO -->
+    <section class="intro">
+      <h1 class="section__title section__title--intro">
+        Check out
+        <strong
+          >Nintendo<br class="line-break-size" />
+          Trivia</strong
+        >
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">
+        quiz app
+      </p>
+      <div class="portfolio-item-individual__item">
+        <img
+          src="../img/trivia-capture.png"
+          alt="scrolling screen capture"
+          class="portfolio-item-individual__img"
+        />
+      </div>
+    </section>
+
+    <div class="portfolio-item-individual__bar">
+      <i class="fab fa-html5"></i>
+      <i class="fab fa-css3-alt"></i>
+      <i class="fab fa-js"></i>
+    </div>
+    <div class="portfolio-item-individual">
+      <p>
+        An early jQuery app of mine. A 10 question quiz web application, using
+        jQuery, CSS, HTML. Not very complex, but was a fundamental stepping
+        stone where I learned early lessons on the importance of accessibility,
+        precise use of HTML elements, utilizing JSON to make data driven
+        experiences and keeping organized CSS class tags. Not only the
+        fundamentals of good website design but really started to realize the
+        kind of tools I had at my fingertips.
+      </p>
+      <img
+        src="../img/trivia-capture-lg.png"
+        alt="larger screen capture"
+        class="portfolio-item-individual__img-lg"
+      />
+      <div class="btn-holder">
+        <a href="https://djdagorne.github.io/quiz-app/" class="btn btn-sm"
+          >Live Demo</a
+        >
+        <a href="https://github.com/djdagorne/quiz-app" class="btn btn-sm"
+          >Github Repo</a
+        >
+      </div>
+      <p>
+        For this project, I really wanted to keep it simple, and have minimal
+        reliance on outside frameworks, and issues surrounding scaling for
+        multiple viewport sizes. Nintendo has always inspired me with the
+        elegant feeling simplicity in their aesthetic, so I figured why not
+        utilize their simple design tenets, my love of trivia, and make
+        something simple but effective and accessible.
+      </p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <a href="mailto:dj.dagorne@gmail.com" class="footer__link"
+        >dj.dagorne@gmail.com</a
+      >
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a href="https://github.com/djdagorne" class="social-list__link"
+            ><i class="fab fa-github"></i
+          ></a>
+        </li>
+        <li class="social-list__item">
+          <a href="https://linkedin.com/in/djdagorne" class="social-list__link"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+    <script src="../js/index.js"></script>
+  </body>
+</html>

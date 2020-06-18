@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dexter Dagorne Portfolio - Tennit</title>
+    <meta
+      name="description"
+      content="Lets check out Dexter Dagorne's Tennit, a React JS based online dating application where users move in together instead of going on dates. Save rent money AND find true love!"
+    />
+    <meta
+      name="keywords"
+      content="Javascript, HTML, CSS, JS, React, ReactJS, PostgreSQL, database, Express, framework, web development, development, front-end, back-end, frontend, backend, full-stack, fullstack, SEO, JWT, Bootstrap, Tennit, CONCERTFINDER, Dexter, Dagorne"
+    />
+    <meta name="author" content="Dexter Dagorne" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"
+    />
+    <!-- FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/684a0e80e0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- BRANDING/HEADER -->
+    <header>
+      <a href="../index.html#home" class="logo" title="back to the homepage">
+        <img src="../img/dexter.png" alt="dexters logo" />
+      </a>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="../index.html" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="../index.html#services" class="nav__link">My Services</a>
+          </li>
+          <li class="nav__item">
+            <a href="../index.html#about" class="nav__link">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a href="../index.html#work" class="nav__link">My Work</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- PORTFOLIO INTRO -->
+    <section class="intro">
+      <h1 class="section__title section__title--intro">
+        Check out <strong>Tennit</strong>
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">
+        true love<br class="line-break-size" />
+        & cheap rent
+      </p>
+      <div class="portfolio-item-individual__item">
+        <img
+          src="../img/tennit-capture.png"
+          alt="scrolling screen capture"
+          class="portfolio-item-individual__img"
+        />
+      </div>
+    </section>
+
+    <div class="portfolio-item-individual__bar">
+      <i class="fab fa-html5"></i>
+      <i class="fab fa-css3-alt"></i>
+      <i class="fab fa-js"></i>
+      <i class="fab fa-react"></i>
+      <i class="fas fa-database"></i>
+      <i class="fas fa-server"></i>
+    </div>
+    <div class="portfolio-item-individual">
+      <p>
+        Tennit is a full stack ReactJS app made with vanilla CSS, Express/NodeJS
+        Server and PostgreSQL database. Included in the full stack app is
+        logging in with expiring web session tokens, messaging, matching,
+        searching, user data hashing, and a... weird sense of humor.
+      </p>
+      <p>
+        Tennit is designed as a satirical dating app about dating people to save
+        on rent. I knew this one would be weird <i>before</i> covid... but I had
+        a lot of fun making it and laughed a lot about how silly the idea is!
+      </p>
+      <img
+        src="../img/tennit-capture-lg.png"
+        alt="larger screen capture"
+        class="portfolio-item-individual__img-lg"
+      />
+      <div class="btn-holder">
+        <a href="https://tennit.djdagorne.now.sh/" class="btn btn-sm"
+          >Live Demo</a
+        >
+        <a href="https://github.com/djdagorne/tennit-client" class="btn btn-sm"
+          >Client Repo</a
+        >
+        <a href="https://github.com/djdagorne/tennit-server" class="btn btn-sm"
+          >Server Repo</a
+        >
+      </div>
+      <p>
+        I wanted a full stack app idea that covered a lot of different API
+        endpoints (messaging, matching, searching, etc), while all feeling
+        cohesive. After a little deliberation, I figured a dating app would be a
+        good way to utilize a lot of different features, and would be a great
+        practice for front end development: all the UX is largely dictated by
+        user generated data. But I've never really cared for online dating, so
+        how do I make it interesting, and how do I make it
+        <i>Dexter's</i> online dating app? Make it funny is how!
+      </p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <a href="mailto:dj.dagorne@gmail.com" class="footer__link"
+        >dj.dagorne@gmail.com</a
+      >
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a href="https://github.com/djdagorne" class="social-list__link"
+            ><i class="fab fa-github"></i
+          ></a>
+        </li>
+        <li class="social-list__item">
+          <a href="https://linkedin.com/in/djdagorne" class="social-list__link"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+    <script src="../js/index.js"></script>
+  </body>
+</html>

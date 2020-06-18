@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dexter Dagorne Portfolio - CONCERTFINDER</title>
+    <meta
+      name="description"
+      content="Lets check out Dexter Dagorne's jQuery based concert recommending application CONCERTFINDER. The web app uses APIs from Last.fm and Ticketmaster to find you a fun night out, where ever you may find yourself. "
+    />
+    <meta
+      name="keywords"
+      content="Javascript, HTML, CSS, JS, jQuery, framework, web development, development, front-end, frontend, SEO, CONCERTFINDER, Dexter, Dagorne"
+    />
+    <meta name="author" content="Dexter Dagorne" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"
+    />
+    <!-- FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/684a0e80e0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- BRANDING/HEADER -->
+    <header>
+      <a href="../index.html#home" class="logo" title="back to the homepage">
+        <img src="../img/dexter.png" alt="dexters logo" />
+      </a>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="../index.html" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="../index.html#services" class="nav__link">My Services</a>
+          </li>
+          <li class="nav__item">
+            <a href="../index.html#about" class="nav__link">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a href="../index.html#work" class="nav__link">My Work</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- PORTFOLIO INTRO -->
+    <section class="intro">
+      <h1 class="section__title section__title--intro">
+        Check out
+        <!-- between 576 762 intro img does weird shit -->
+        <strong>CONCERT<br class="line-break-size" />FINDER</strong>
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">
+        from a pre-covid era...
+      </p>
+      <div class="portfolio-item-individual__item">
+        <img
+          src="../img/concertfinder-capture.png"
+          alt="scrolling demo pic"
+          class="portfolio-item-individual__img"
+        />
+      </div>
+    </section>
+
+    <div class="portfolio-item-individual__bar">
+      <i class="fab fa-html5"></i>
+      <i class="fab fa-css3-alt"></i>
+      <i class="fab fa-js"></i>
+    </div>
+    <div class="portfolio-item-individual">
+      <p>
+        A concert lookup web application, using last.fm Tastemaker and
+        Ticketmasters Eventfinder API's, jQuery, vanilla CSS, HTML. You supply
+        the artist and optionally the city you want, and Concertfinder will
+        return
+      </p>
+      <img
+        src="../img/concertfinder-capture-lg.png"
+        alt="larger screen capture"
+        class="portfolio-item-individual__img-lg"
+      />
+      <div class="btn-holder">
+        <a
+          href="https://djdagorne.github.io/bootstrap-playground/"
+          class="btn btn-sm"
+          >Live Demo</a
+        >
+        <a
+          href="https://github.com/djdagorne/bootstrap-playground"
+          class="btn btn-sm"
+          >Github Repo</a
+        >
+      </div>
+      <p>
+        On my journey to learn all about RESTful APIs, and back-end development
+        I wanted to first use my front-end and javascript skills as a
+        springboard. As a first step to making my own APIs I used all sorts of
+        public and developer APIs to understand industry standard procedures
+        when it comes to setting up, documenting, and making applications using
+        data fetched from working (and not working) endpoints.
+      </p>
+      <p>
+        Eventually I found a couple of highly similar, and very useful APIs with
+        Ticketmaster and Last.fm, and utilized them together to create a useful
+        application that will take a user input and recommend similar acts using
+        Last.fm's Tastemaker API and upon expanding the link will present tour
+        dates as found by Ticketmaster's Eventfinder API. Was a lot of fun
+        getting this working and showing it off to friends for the first time!
+      </p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <a href="mailto:dj.dagorne@gmail.com" class="footer__link"
+        >dj.dagorne@gmail.com</a
+      >
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a href="https://github.com/djdagorne" class="social-list__link"
+            ><i class="fab fa-github"></i
+          ></a>
+        </li>
+        <li class="social-list__item">
+          <a href="https://linkedin.com/in/djdagorne" class="social-list__link"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+    <script src="../js/index.js"></script>
+  </body>
+</html>

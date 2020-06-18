@@ -84,6 +84,14 @@ strong {
   transition: transform 200ms ease-in-out;
 }
 
+.btn-sm {
+  padding: 0.5em 1em;
+  margin: 1em;
+  font-size: var(--ff-secondary);
+  text-transform: uppercase;
+  transition: transform 200ms ease-in-out;
+}
+
 .btn__home {
   margin-top: 5rem;
   margin-bottom: 0px;
@@ -294,7 +302,7 @@ header {
   .intro {
     display: grid;
     width: min-content;
-    margin: 25vh auto 25vh auto; /* 0 auto ||  25vh auto 25vh auto */
+    margin: 0 auto; /* 0 auto ||  25vh auto 25vh auto */
     grid-column-gap: 1em;
     grid-template-areas:
       "img title"
@@ -331,7 +339,6 @@ header {
     box-shadow: var(--bs);
   }
 
-  /* MAYBE should be in typography, but this more layout related imo */
   .section__subtitle--intro {
     align-self: start;
     grid-column: -1 / 1;
@@ -490,7 +497,7 @@ header {
 .portfolio__item:focus,
 .portfolio__item:hover {
   position: relative;
-  transform: scale(1.1);
+  transform: scale(1.051);
   outline-offset: 0px;
   z-index: 2;
 }
@@ -559,7 +566,7 @@ header {
   padding: 0.5em;
 }
 
-/* #### PORTFOLIO ITEMS */
+/* #### PORTFOLIO ITEM PAGES */
 
 .portfolio-item-individual {
   padding: 0 2em 2em;
@@ -571,4 +578,71 @@ header {
   max-width: 768px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.portfolio-item-individual__bar {
+  display: flex;
+  justify-content: center;
+  margin-top: -1em;
+  margin-bottom: 2em;
+  background-color: var(--clr-dark);
+  box-shadow: var(--bs-light);
+}
+
+.portfolio-item-individual__bar i {
+  color: var(--clr-accent);
+  margin: 0.5em 1.5em;
+}
+
+.portfolio-item-individual__item {
+  grid-area: img;
+  min-width: 250px;
+  position: relative;
+  z-index: 2; /* images are lvl 2 */
+  box-shadow: var(--bs);
+  background: var(--clr-accent);
+  transition: transform 250ms;
+  max-width: 450px;
+  max-height: 450px;
+  overflow: hidden;
+}
+
+.portfolio-item-individual__img,
+.portfolio-item-individual__img-lg {
+  box-shadow: var(--bs);
+}
+.portfolio-item-individual__img-lg {
+  margin: 2em auto;
+}
+
+.portfolio-item-individual__img {
+  transition: transform 5000ms, opacity 250ms linear;
+}
+
+.portfolio-item-individual__img:hover {
+  transform: translateY(calc(-100% + 450px));
+}
+
+.btn-holder {
+  text-align: center;
+  margin: 0;
+  margin-top: -1em;
+}
+
+@media (min-width: 576px) {
+  .portfolio-item-individual__item {
+    max-width: 300px;
+    max-height: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .portfolio-item-individual__item {
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .portfolio-item-individual__img:hover {
+    transform: translateY(calc(-100% + 300px));
+  }
 }

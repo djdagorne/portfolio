@@ -4,7 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dexter Dagorne Portfolio</title>
-    <link rel="stylesheet" href="" />
+    <meta
+      name="description"
+      content="Dexter Dagorne's Portfolio Website, get to know Dexter and see some of his latest creations!"
+    />
+    <meta
+      name="keywords"
+      content="Javascript, HTML, CSS, JS, React, ReactJS, jQuery, PostgreSQL, database, Express, framework, web development, development, front-end, back-end, frontend, backend, full-stack, fullstack, SEO, JWT, Bootstrap, Tennit, CONCERTFINDER, Dexter, Dagorne"
+    />
+    <meta name="author" content="Dexter Dagorne" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"
@@ -23,21 +49,14 @@
   <body>
     <!-- BRANDING/HEADER -->
     <header id="home">
-      <div class="logo">
-        <!-- in a div in case i change to svg later -->
-        <img
-          src="img/dexter.png"
-          alt="dexter"
-          title="pascal case didn't look as cool"
-        />
-      </div>
+      <a href="#home" class="logo">
+        <img src="img/dexter.png" alt="dexters logo" />
+      </a>
       <button class="nav-toggle" aria-label="toggle navigation">
         <span class="hamburger"></span>
       </button>
-      <!-- aria-label because it has not HTML label element to help screen readers/a11y stuff -->
       <nav class="nav">
         <ul class="nav__list">
-          <!-- the __ is so we know its a subcomponent when setting up custom CSS -->
           <li class="nav__item">
             <a href="#home" class="nav__link">Home</a>
           </li>
@@ -66,24 +85,23 @@
       <p class="section__subtitle section__subtitle--intro">full-stack dev</p>
       <img
         src="img/dev-dex-01.jpg"
-        alt="a picture of dexter"
+        alt="a picture of Dexters smiling face"
         class="intro__img"
       />
-      <!-- the -- indicates a modifier class, the __ indicates subcomponent, so its a modified subcomponent -->
     </section>
 
     <!-- MY SERVICES -->
     <section class="my-services" id="services">
-      <!-- three column section going over my skillset -->
       <h2 class="section__title section__title--services">What I Do</h2>
       <div class="services">
         <div class="service">
           <h3>Front End</h3>
           <p>
             You only get one first impression. That's why your site has to look
-            beautiful. And play nice with screen readers. And you can't forget
-            the accessibility functions now either... When it comes to front end
-            development I'm capable of making sure you're site feels
+            beautiful. And play nice with screen readers. And you got to make it
+            SEO friendly. And you can't forget the accessibility functions now
+            either... When it comes to front end development I'm capable of
+            making sure you're site feels
             <i>right</i>, wether you're on the phone, desktop, or using a screen
             reader.
           </p>
@@ -117,7 +135,6 @@
     </section>
     <!-- ABOUT ME -->
     <section class="about-me" id="about">
-      <!-- by having sections/subsections we can assign classes to control sizing uniformly with all our titles/subtitles etc -->
       <h2 class="section__title section__title--about">Who I am</h2>
       <p class="section__subtitle section__subtitle--about">
         Web Dev & Designer based out of Toronto
@@ -142,7 +159,7 @@
       </div>
       <img
         src="img/dev-dex-coffee.jpg"
-        alt="Sipping a fine americano around VanCity"
+        alt="Sipping a fine americano in VanCity"
         class="about-me__img"
       />
     </section>
@@ -154,52 +171,47 @@
         A selection of some of my work.
       </p>
       <div class="portfolio">
-        <a href="projects/portfolio-item.html" class="portfolio__item">
+        <a
+          href="projects/portfolio-item-tennit.html"
+          class="portfolio__item"
+          title="to Dexter's Tennit dating application description page"
+        >
           <img
             src="img/tennit-capture.png"
             alt="tennit mobile screen cap"
             class="portfolio__img"
           />
         </a>
-        <a href="projects/portfolio-item.html" class="portfolio__item">
-          <img
-            src="img/noteful-capture.png"
-            alt="noteful mobile screen cap"
-            class="portfolio__img"
-          />
-        </a>
-        <a href="projects/portfolio-item.html" class="portfolio__item">
+        <a
+          href="projects/portfolio-item-bootstrap.html"
+          class="portfolio__item"
+          title="to Dexter's Bootstrap Sandbox Demo description page"
+        >
           <img
             src="img/bootstrap-capture.png"
-            alt="boostrap-playground mobile screen cap"
+            alt="bootstrap-playground mobile screen cap"
             class="portfolio__img"
           />
         </a>
-        <a href="projects/portfolio-item.html" class="portfolio__item">
+        <a
+          href="projects/portfolio-item-concertfinder.html"
+          class="portfolio__item"
+          title="to Dexter's Concertfinder App description page"
+        >
           <img
             src="img/concertfinder-capture.png"
             alt="concertfinder mobile screen cap"
             class="portfolio__img"
           />
         </a>
-        <a href="projects/portfolio-item.html" class="portfolio__item">
-          <img
-            src="img/react-tetris-capture.png"
-            alt="tetris mobile screen cap"
-            class="portfolio__img"
-          />
-        </a>
-        <a href="projects/portfolio-item.html" class="portfolio__item">
+        <a
+          href="projects/portfolio-item-trivia.html"
+          class="portfolio__item"
+          title="to Dexter's trivia app  description page"
+        >
           <img
             src="img/trivia-capture.png"
             alt="trivia mobile screen cap"
-            class="portfolio__img"
-          />
-        </a>
-        <a href="projects/portfolio-item.html" class="portfolio__item">
-          <img
-            src="img/github-capture.png"
-            alt="github mobile screen cap"
             class="portfolio__img"
           />
         </a>
@@ -207,17 +219,26 @@
     </section>
     <!-- FOOTER -->
     <footer class="footer">
-      <a href="mailto:dj.dagorne@gmail.com" class="footer__link"
+      <a
+        href="mailto:dj.dagorne@gmail.com"
+        class="footer__link"
+        title="to email Dexter"
         >dj.dagorne@gmail.com</a
       >
       <ul class="social-list">
         <li class="social-list__item">
-          <a href="https://github.com/djdagorne" class="social-list__link"
+          <a
+            href="https://github.com/djdagorne"
+            class="social-list__link"
+            title="to Dexter's Github"
             ><i class="fab fa-github"></i
           ></a>
         </li>
         <li class="social-list__item">
-          <a href="https://linkedin.com/in/djdagorne" class="social-list__link"
+          <a
+            href="https://linkedin.com/in/djdagorne"
+            class="social-list__link"
+            title="to Dexter's LinkedIn"
             ><i class="fab fa-linkedin"></i
           ></a>
         </li>
