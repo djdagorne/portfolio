@@ -4,13 +4,11 @@
   box-sizing: border-box;
 }
 
-/* custom properties- update later for design */
 :root {
-  /* monospaced */
   --ff-primary: "Lato", sans-serif;
   --ff-secondary: "Source Code Pro", monospace;
 
-  --fw-reg: 300;
+  --fw-reg: 400;
   --fw-bold: 900;
 
   --clr-light: #f0f0f0;
