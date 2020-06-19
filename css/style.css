@@ -11,7 +11,7 @@
   --fw-reg: 400;
   --fw-bold: 900;
 
-  --clr-light: #f0f0f0;
+  --clr-light: #f1f1f1;
   --clr-dark: #303030;
   --clr-accent: #43bfc7;
 
@@ -71,6 +71,7 @@ strong {
 .btn {
   display: inline-block;
   padding: 0.5em 2.5em;
+  margin: 0 auto;
   background: var(--clr-accent);
   color: var(--clr-dark);
   text-decoration: none;
@@ -394,7 +395,19 @@ header {
 
 .service {
   max-width: 576px;
+  min-width: 28%;
   margin: 0 auto;
+}
+
+.service p + p::before {
+  /* interesting way of making a very customizable <hr/> psuedoelement */
+  content: "";
+  display: block;
+  width: 3.5em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  background: var(--clr-light);
+  opacity: 0.33;
 }
 
 @media (min-width: 768px) {
