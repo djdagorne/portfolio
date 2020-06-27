@@ -268,6 +268,9 @@ header {
 /* ##################################################### INTRO SECTIONS */
 .intro {
   position: relative;
+  left: 0;
+  right: 0;
+  z-index: -10;
 }
 
 .port-intro {
@@ -299,6 +302,8 @@ header {
 
 @media (min-width: 576px) {
   .intro {
+    position: absolute;
+    top: 0;
     display: grid;
     width: min-content;
     margin: 0 auto; /* 0 auto ||  25vh auto 25vh auto */
@@ -309,6 +314,8 @@ header {
     grid-template-columns: min-content max-content;
     padding-top: 3em;
     padding-right: 0;
+    margin-top: 150px;
+    margin-bottom: 150px;
   }
 
   .section__subtitle--intro {
@@ -411,6 +418,10 @@ header {
 }
 
 @media (min-width: 768px) {
+  .my-services {
+    margin-top: 700px;
+    z-index: 15;
+  }
   .services {
     display: flex;
     max-width: 992px; /* stops the space inbetween service el's from getting too big */
@@ -428,11 +439,11 @@ header {
 .about-me {
   max-width: 992px;
   margin: 0 auto;
+  background: var(--clr-light);
 }
 
 .about-me__img {
   box-shadow: var(--bs);
-  margin: auto;
 }
 
 .about-me img {
