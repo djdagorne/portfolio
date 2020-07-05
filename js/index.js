@@ -17,7 +17,7 @@ const pic2 = document.getElementsByClassName("about-me__img")[0];
 window.addEventListener("scroll", function () {
   /* hero div parallax */
   const offset = window.pageYOffset;
-  hero.style.top = offset * 0.9 + "px";
+  hero.style.top = offset * 1 + "px";
 
   /* slight parallax on second img */
   const offset2 = window.pageYOffset / 7;
