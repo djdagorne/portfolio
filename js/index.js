@@ -11,15 +11,10 @@ navLinks.forEach((link) => {
   });
 });
 
-const hero = document.getElementById("hero");
 const pic2 = document.getElementsByClassName("about-me__img")[0];
 
 window.addEventListener("scroll", function () {
-  /* hero div parallax */
-  const offset = window.pageYOffset;
-  hero.style.top = offset * 1 + "px";
-
   /* slight parallax on second img */
-  const offset2 = window.pageYOffset / 7;
-  pic2.style.top = offset2 * 0.5 + "px";
+  const offset = window.pageYOffset / 7;
+  pic2.style.top = offset * 0.5 + "px";
 });
